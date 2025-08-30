@@ -51,15 +51,17 @@ const resolvers = {
   status: () => 'Server running WITH database and Redis cache',
 
   characters: async (args: { filters?: any }) => {
-    try {
-      const service = new CharacterService();
-      const characters = await service.getAllCharacters(args.filters);
-      return characters.map(char => service.formatForGraphQL(char));
-    } catch (error) {
-      console.error('Error in characters resolver:', error);
-      return [];
-    }
-  },
+  console.log('Received filters:', args.filters); // <- Agrega esto
+  try {
+    const service = new CharacterService();
+    const characters = await service.getAllCharacters(args.filters);
+    console.log('Found characters:', characters.length); // <- Y esto
+    return characters.map(char => service.formatForGraphQL(char));
+  } catch (error) {
+    console.error('Error in characters resolver:', error);
+    return [];
+  }
+},
 
   character: async (args: { id: number }) => {
     try {
