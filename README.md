@@ -25,12 +25,6 @@ npm install
 3. Environment Configuration:
 Copy and paste the `.env` file sent by email to the root directory of the project. The file contains all necessary environment variables including database credentials, Redis configuration, and API settings.
 
-4. Database Setup:
-```bash
-# Create database
-createdb rickandmorty
-```
-
 ## Running the Application
 
 ### Development Mode
@@ -43,11 +37,6 @@ Server runs on `http://localhost:4000`
 ```bash
 npm run build
 npm start
-```
-
-### Testing
-```bash
-npm test
 ```
 
 ## API Endpoints
