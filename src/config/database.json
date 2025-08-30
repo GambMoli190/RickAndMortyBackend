@@ -1,0 +1,44 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "QnCXqxdxxGkMrpnkyAyqkzOIubLYnBqv",
+    "database": "rickandmorty",
+    "host": "hopper.proxy.rlwy.net",
+    "port": 14065,
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "test": {
+    "username": "postgres",
+    "password": "QnCXqxdxxGkMrpnkyAyqkzOIubLYnBqv",
+    "database": "rickandmorty_test",
+    "host": "hopper.proxy.rlwy.net",
+    "port": 14065,
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "production": {
+    "username": "postgres",
+    "password": "QnCXqxdxxGkMrpnkyAyqkzOIubLYnBqv",
+    "database": "rickandmorty",
+    "host": "hopper.proxy.rlwy.net",
+    "port": 14065,
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
