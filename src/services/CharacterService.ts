@@ -101,6 +101,15 @@ export class CharacterService {
    * Convierte un modelo Character a formato GraphQL
    */
   formatForGraphQL(character: Character): any {
+    const getDateString = (dateValue: any) => {
+      if (!dateValue) return new Date().toISOString();
+
+      if (typeof dateValue === 'string') return dateValue;
+      if (dateValue instanceof Date) return dateValue.toISOString();
+
+      return new Date().toISOString();
+    };
+
     return {
       id: character.id,
       name: character.name,
@@ -119,7 +128,7 @@ export class CharacterService {
       image: character.image || '',
       episode: character.Episodes?.map(ep => ep.url) || [],
       url: character.url || '',
-      created: character.apiCreated?.toISOString() || character.createdAt.toISOString()
+      created: getDateString(character.apiCreated || character.createdAt)
     };
   }
 }
